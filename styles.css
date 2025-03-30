@@ -1,0 +1,198 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;  /* Dark background */
+    color: #ffffff;  /* White text */
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #ff6b81, #ff9a8b);
+    color: white;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/fashion-banner.jpg') center/cover;
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+}
+
+/* Offers Section */
+.offers {
+    background: #292929;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.offers li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+/* Login & Contact Page */
+.form-container {
+    background: #333;
+    padding: 30px;
+    width: 40%;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.2);
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ff4757;
+}
+/* Product List - Display dresses side by side */
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Product Box */
+.product {
+    background: #f5f5f5;  /* Light grey background */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+}
+
+/* Bigger images with faces visible */
+.product img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+    background: #e0e0e0; /* Slightly darker grey background for contrast */
+}
+
+/* Button Styling */
+.product button {
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.product button:hover {
+    background-color: #ff4757;
+}
+/* Multicolor text for product names */
+.product h2 {
+    background: linear-gradient(45deg, #ff6b81, #ff9a8b, #ffb199, #ff4757);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/* Ensure all product boxes have the same height */
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 420px; /* Adjust for uniform height */
+}
+
+/* Align buttons at the bottom */
+.product-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+/* Make both buttons equal in size */
+.product button, .wishlist-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+/* Product Buttons - Fix alignment */
+.product-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+}
+
+/* "Add to Cart" button - Full width */
+.product button {
+    flex: 1; /* Takes available space */
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Wishlist Button - Smaller */
+.wishlist-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.5em; /* Adjust size */
+    cursor: pointer;
+    color: #ccc;
+    width: 40px; /* Small width */
+    height: 40px; /* Small height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+/* Keep Wishlist Red When Active */
+.wishlist-btn.active {
+    color: red;
+}
+
+/* Make sure the product box is tall enough to fit buttons */
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 420px; /* Adjust for consistency */
+    padding-bottom: 10px;
+}
+

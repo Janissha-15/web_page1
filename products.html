@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Dresses</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleWishlist(button) {
+            button.classList.toggle("active");
+        }
+    </script>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;  
+            color: #ffffff;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ff6b81, #ff9a8b);
+            color: white;
+            padding: 20px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Product List */
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        /* Product Box */
+        .product {
+            background: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 220px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 450px;
+            position: relative;
+        }
+
+        /* Product Images */
+        .product img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 10px;
+        }
+
+        /* Product Title */
+        .product h2 {
+            font-weight: bold;
+            margin: 10px 0;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        /* Price Styling - Above Buttons */
+        .product p {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: black;
+            margin: 10px 0;
+        }
+
+        /* Buttons Container - Centering Buttons */
+        .product-buttons {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            gap: 10px; 
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        /* Add to Cart Button */
+        .product button {
+            background-color: #ff6b81;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1em;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100px;
+        }
+
+        .product button:hover {
+            background-color: #ff4757;
+        }
+
+        /* Wishlist Button */
+        .wishlist-btn {
+            background: transparent;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #ccc;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        /* Wishlist Button Active (Red) */
+        .wishlist-btn.active {
+            color: red;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #292929;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Shop Trendy Dresses</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <section class="product-list">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSo9pVg4LgDYoLOzerzGV2ozejOQBgQcCFqek1UZMbCGyf4yt3ipneLL5IUAxoBlrlO7su05gxYM2SwFR0eJ0PMf-1H8tAf-Iq4fe5S6HKSmRw7bwSdIv43Cg" alt="Elegant Red Dress">
+            <h2>Elegant Red Dress</h2>
+            <p>$49.99</p>
+            <div class="product-buttons">
+                <button>Add to Cart</button>
+                <button class="wishlist-btn" onclick="toggleWishlist(this)">❤️</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRqMP73ZLFW26q_6Gd47zkrLe-VVN2kdheKwRtgwsXx8d3eBePXbwT1b_MkJa4GF9R3W7tRWcrYhvbGFpngjpVtsO3KL8YJcejex88PMqU" alt="Floral Summer Dress">
+            <h2>Floral Summer Dress</h2>
+            <p>$39.99</p>
+            <div class="product-buttons">
+                <button>Add to Cart</button>
+                <button class="wishlist-btn" onclick="toggleWishlist(this)">❤️</button>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQue3zvF9Wnr4TN3sI0sStazL9xgpdGOgCwjO3skJM_mgZmxjPToUAzStDdxZtLYCmjbAl4_KDCJDNLpPFKUKBBToYry-hx1ndyiKlJEaA" alt="Glamorous Evening Gown">
+            <h2>Glamorous Evening Gown</h2>
+            <p>$89.99</p>
+            <div class="product-buttons">
+                <button>Add to Cart</button>
+                <button class="wishlist-btn" onclick="toggleWishlist(this)">❤️</button>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRi7LsZJpOXidEXnYrGXMJJDrDPzGQT3hQsbWFKpdBaOjarlqlp2BIB2ZQuoRB6QuWVAae-hE2EiLJD62EIBxthlVXQZCH1Ckub3jFo_Bk" alt="Chic Blue Dress">
+            <h2>Chic Blue Dress</h2>
+            <p>$59.99</p>
+            <div class="product-buttons">
+                <button>Add to Cart</button>
+                <button class="wishlist-btn" onclick="toggleWishlist(this)">❤️</button>
+            </div>
+        </div>
+
+        <!-- Additional 4 Products -->
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRQxflHYAil_02pIi9BOtr3VKw-QqTiOTPhpaqPj2kBNLu6MSy9oPsGJxd7VFkyZF5gIgZTdkShzRv_Lx8VAmBukVmeE_nhzZFoPg9iD8c" alt="New Dress">
+            <h2>Trendy Pink Dress</h2>
+            <p>$69.99</p>
+            <div class="product-buttons">
+                <button>Add to Cart</button>
+                <button class="wishlist-btn" onclick="toggleWishlist(this)">❤️</button>
+            </div>
+        </div>
+         <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRt2mg67jFiu5Zfoc5LFyo-EZf-AsgHHso-EXjGIvSgTg63eCA9_RXM4NFU-4UHFHEF8819aQQAj6cMYVtH_R4KeLyNCJgwdLWBT6IPHmiOGdduh6CqZPPx" alt="New Dress">
+            <h2>Trendy Pink Dress</h2>
+            <p>$69.99</p>
+            <div class="product-buttons">
+                <button>Add to Cart</button>
+                <button class="wishlist-btn" onclick="toggleWishlist(this)">❤️</button>
+            </div>
+        </div>
+         <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ8K-H9DPokEePkVv85q1cqDxsiCug6TQu_A68huHRdLb0FXpSR-eiyfMQdsIKVmYFEsSnm1fnxZhA84QK1dQPrpFmbi4Btde0DrtzQl7ft" alt="New Dress">
+            <h2>Trendy Pink Dress</h2>
+            <p>$69.99</p>
+            <div class="product-buttons">
+                <button>Add to Cart</button>
+                <button class="wishlist-btn" onclick="toggleWishlist(this)">❤️</button>
+            </div>
+        </div>
+         <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSKxs1G8FxmnUA0woQ_L0jBtWtiEOYU86o0hjeqDK1cqwcxkmJI4S_Dq0Ov2SG5dp1k-k05IT2EAEtj5ekcO3VibvLyd1wRH6YtSNkmzhI" alt="New Dress">
+            <h2>Trendy Pink Dress</h2>
+            <p>$69.99</p>
+            <div class="product-buttons">
+                <button>Add to Cart</button>
+                <button class="wishlist-btn" onclick="toggleWishlist(this)">❤️</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRLRcOu4dvsEr1owJ1u5AUmnkMSDbHVawDEiESjoQws5hpzAVHq97fKWUaoWQ0C_BL46DpidEoZQ4n4wrAOTakaPMgeN2wyMHge25zwFrIP" alt="New Dress">
+            <h2>Trendy Pink Dress</h2>
+            <p>$69.99</p>
+            <div class="product-buttons">
+                <button>Add to Cart</button>
+                <button class="wishlist-btn" onclick="toggleWishlist(this)">❤️</button>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- More products can be added here -->
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Elegant Fashion Store | Stay Stylish ✨</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Fashion Store</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+            background: url('https://cdn.tatlerasia.com/asiatatler/i/ph/2020/12/09093627-vestidowomen3_cover_1280x853.jpg') no-repeat center center/cover;
+            position: relative;
+        }
+
+        /* Dark overlay for readability */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px 0; /* More padding for top and bottom space */
+        }
+
+        /* Website Name */
+        header h1 {
+            font-size: 2.8em; /* Bigger font */
+            margin: 20px 0; /* Added space above and below */
+            letter-spacing: 2px;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 15px; /* More space between store name and menu */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin: 0 25px; /* Shorter space between links */
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6b81;
+        }
+
+        /* Hero, Offers, and Feedback Sections */
+        .hero, .offers, .feedback {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            margin: 30px auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h2, .offers h2, .feedback h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .hero p, .offers ul, .feedback ul {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            background: #ff6b81;
+            color: white;
+            font-size: 1.2em;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .hero button:hover {
+            background: #ff4757;
+        }
+
+        /* Offers List */
+        .offers ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .offers li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        /* Feedback List */
+        .feedback ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feedback li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        /* Feedback Input */
+        #feedback-input {
+            width: 80%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 1em;
+        }
+
+        /* Submit Button */
+        .feedback button {
+            background: #ff6b81;
+            color: white;
+            font-size: 1em;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .feedback button:hover {
+            background: #ff4757;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>✨ Elegant Fashion Store ✨</h1> <!-- Website name with extra space -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop Dresses</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>🔥 Spring Collection - Up to 50% Off! 🔥</h2>
+        <p>Shop the latest trends and look stunning this season.</p>
+        <button>Shop Now</button>
+    </section>
+
+    <section class="offers">
+        <h2>🎉 Current Offers 🎉</h2>
+        <ul>
+            <li>💃 Buy 2 Get 1 Free on All Dresses!</li>
+            <li>🎁 Free Shipping on Orders Over $50</li>
+            <li>⚡ Flash Sale - Extra 20% Off Today!</li>
+        </ul>
+    </section>
+
+    <section class="feedback">
+        <h2>📝 Customer Feedback</h2>
+        <ul id="feedback-list">
+            <li>🌟🌟🌟🌟🌟 Love the collection! - Emma</li>
+            <li>🌟🌟🌟🌟 Great deals and fast delivery! - Mia</li>
+        </ul>
+
+        <h3>Leave Your Feedback</h3>
+        <input type="text" id="feedback-input" placeholder="Write your feedback...">
+        <button onclick="addFeedback()">Submit</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Elegant Fashion Store | Stay Stylish ✨</p>
+    </footer>
+
+    <script>
+        function addFeedback() {
+            let input = document.getElementById("feedback-input");
+            let feedbackList = document.getElementById("feedback-list");
+            
+            if (input.value.trim() !== "") {
+                let newFeedback = document.createElement("li");
+                newFeedback.textContent = "🌟🌟🌟🌟🌟 " + input.value;
+                feedbackList.appendChild(newFeedback);
+                input.value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
